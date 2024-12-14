@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOGO Offer</title>
+    <link rel="stylesheet" href="Assignment.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">YAY! It’s BOGO</div>
+
+      <!-- Option 1 -->
+      <div class="option">
+        <div class="flex-container">
+          <div class="flex-radio">
+            <input
+              type="radio"
+              name="option"
+              value="1"
+              data-price="10"
+              onclick="updateTotal(this)"
+              id="radio-option-1"
+            />
+            <div class="left-section">
+              <span style="font-weight: bold">1 Unit</span>
+              <span
+                style="
+                  color: rgb(247, 243, 243);
+                  background-color: #FF6B82;
+                  padding: 5px;
+                "
+              >
+                10% Off
+              </span>
+            </div>
+          </div>
+          <div class="right-section">$10.00 USD</div>
+        </div>
+        <div class="flex-container">
+            <div class="left-section1">Standard Price</div>
+            <div class="right-section1"><del>$24.00 USD</del></div>
+        </div>
+
+        <div
+          class="dropdown-container"
+          id="dropdown-container-1"
+          style="display: none"
+        >
+        <div class="dropdown-row">
+            <span class="row-label"></span>
+            <label style="margin-left: 18px;">Size</label>
+            <label style="margin-left: 24px;">Colour</label>
+          </div>
+          <div class="dropdown-row">
+            <span class="row-label">#1</span>
+            <select class="dropdown size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <select class="dropdown color">
+              <option value="Black">Black</option>
+              <option value="White">White</option>
+              <option value="Blue">Blue</option>
+              <option value="Red">Red</option>
+            </select>
+          </div>
+          <div class="dropdown-row">
+            <span class="row-label">#2</span>
+            <select class="dropdown size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <select class="dropdown color">
+              <option value="Colour">Colour</option>
+              <option value="Black">Black</option>
+              <option value="White">White</option>
+              <option value="Blue">Blue</option>
+              <option value="Red">Red</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Option 2 -->
+      <div class="option most-popular">
+        <span class="tag">MOST POPULAR</span>
+        <div class="flex-container">
+          <div class="flex-radio">
+            <input
+              type="radio"
+              name="option"
+              value="2"
+              data-price="18"
+              onclick="updateTotal(this)"
+              id="radio-option-2"
+            />
+            <div class="left-section">
+              <span style="font-weight: bold">2 Unit</span>
+              <span
+                style="
+                  color: rgb(247, 243, 243);
+                  background-color: #FF6B82;
+                  padding: 5px;
+                "
+              >
+                20% Off
+              </span>
+            </div>
+          </div>
+          <div class="right-section">$18.00 USD</div>
+        </div>
+        <div class="flex-container">
+            <div class="left-section1"></div>
+            <div class="right-section1"><del>$24.00 USD</del></div>
+        </div>
+        <div
+          class="dropdown-container"
+          id="dropdown-container-2"
+          style="display: none"
+        >
+        <div class="dropdown-row">
+            <span class="row-label"></span>
+            <label style="margin-left: 18px;">Size</label>
+            <label style="margin-left: 24px;">Colour</label>
+          </div>
+          <div class="dropdown-row">
+            <span class="row-label">#1</span>
+            <select class="dropdown size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <select class="dropdown color">
+                  <option value="Colour">Colour</option>
+              <option value="Black">Black</option>
+              <option value="White">White</option>
+              <option value="Blue">Blue</option>
+              <option value="Red">Red</option>
+            </select>
+          </div>
+          <div class="dropdown-row">
+            <span class="row-label">#2</span>
+            <select class="dropdown size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <select class="dropdown color">
+              <option value="Colour">Colour</option>
+              <option value="Black">Black</option>
+              <option value="White">White</option>
+              <option value="Blue">Blue</option>
+              <option value="Red">Red</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Option 3 -->
+      <div class="option">
+        <div class="flex-container">
+          <div class="flex-radio">
+            <input
+              type="radio"
+              name="option"
+              value="3"
+              data-price="24"
+              onclick="updateTotal(this)"
+              id="radio-option-3"
+            />
+            <div class="left-section">
+              <span style="font-weight: bold">3 Unit</span>
+              <span
+                style="color: rgb(247, 243, 243); background-color: #FF6B82; padding: 5px"
+              >
+                30% Off
+              </span>
+            </div>
+          </div>
+          <div class="right-section">$24.00 USD</div>
+        </div>
+
+        <div class="flex-container">
+            <div class="left-section1"></div>
+            <div class="right-section1"><del>$24.00 USD</del></div>
+        </div>
+
+        <div
+          class="dropdown-container"
+          id="dropdown-container-3"
+          style="display: none"
+        >
+        <div class="dropdown-row">
+            <span class="row-label"></span>
+            <label style="margin-left: 18px;">Size</label>
+            <label style="margin-left: 24px;">Colour</label>
+          </div>
+          <div class="dropdown-row">
+            <span class="row-label">#1</span>
+            <select class="dropdown size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <select class="dropdown color">
+                  <option value="Colour">Colour</option>
+              <option value="Black">Black</option>
+              <option value="White">White</option>
+              <option value="Blue">Blue</option>
+              <option value="Red">Red</option>
+            </select>
+          </div>
+          <div class="dropdown-row">
+            <span class="row-label">#2</span>
+            <select class="dropdown size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <select class="dropdown color">
+              <option value="Colour">Colour</option>
+              <option value="Black">Black</option>
+              <option value="White">White</option>
+              <option value="Blue">Blue</option>
+              <option value="Red">Red</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-container">
+        <div class="free-delivery">Free Delivery</div>
+        <div class="total">Total: $<span id="total1" style="font-size: 18px; font-weight: bold;">0.00 USD</span></div>
+      </div>
+
+      <!-- Add to Cart Button -->
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+<!-- funcalities of  DropDown -->
+    <script>
+      function updateTotal(radioElement) {
+        
+        var units = radioElement.value;
+        var price = parseFloat(radioElement.getAttribute("data-price"));
+
+      
+        document.getElementById("total1").textContent = (price * units).toFixed(2);
+
+  
+        var allDropdowns = document.querySelectorAll(".dropdown-container");
+        allDropdowns.forEach(function (dropdown) {
+          dropdown.style.display = "none";
+        });
+
+        
+        var selectedDropdown = document.getElementById("dropdown-container-" + units);
+        if (selectedDropdown) {
+          selectedDropdown.style.display = "block";
+        }
+      }
+
+     
+      window.onload = function () {
+        var allDropdowns = document.querySelectorAll(".dropdown-container");
+        allDropdowns.forEach(function (dropdown) {
+          dropdown.style.display = "none";
+        });
+      };
+    </script>
+  </body>
+</html>
