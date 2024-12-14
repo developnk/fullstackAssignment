@@ -1,0 +1,37 @@
+name: Python CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Copy code to server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ vars.SANDBOX_SERVER_HOST_92 }}
+          username: ${{ vars.SANDBOX_USER_92 }}
+          password: ${{ vars.SANDBOX_PWD_92 }}
+          source: "."
+          target: /var/www/conversion/${{ github.run_id }}
+
+      - name: Run deployment script on server
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ vars.SANDBOX_SERVER_HOST_92 }}
+          username: ${{ vars.SANDBOX_USER_92 }}
+          password: ${{ vars.SANDBOX_PWD_92 }}
+          script: |
+            echo "Run Number: ${{ github.run_number }}"
+            mkdir -p /var/www/conversion/${{ github.run_number }}.${{ github.run_attempt }}
+            cp -a /var/www/conversion/html/. /var/www/conversion/${{ github.run_number }}.${{ github.run_attempt }}/
+            cp -rf /var/www/conversion/${{ github.run_id }}/. /var/www/conversion/html/
+            sudo service apache2 restart
+            rm -r /var/www/conversion/${{ github.run_id }}
+            rm -r /var/www/conversion/${{ github.run_number }}.${{ github.run_attempt }}
